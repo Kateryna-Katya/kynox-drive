@@ -1,56 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/test-two/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/test-two/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/test-two/assets/styles-guStct1H.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kynox-Drive | IT-школа нового поколения</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230284c7'/%3E%3Cpath d='M32 12L48 22V42L32 52L16 42V22L32 12Z' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='32' r='6' fill='white'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" crossorigin src="/kynox-drive/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/kynox-drive/assets/styles-BxXqZwJA.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="#" class="header__logo">
+          Kynox<span class="header__logo-accent">-Drive</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav" id="nav-menu">
+          <ul class="header__list">
+              <li class="header__item"><a href="#" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#about" class="header__link">О школе</a></li>
+              <li class="header__item"><a href="#courses" class="header__link">Курсы</a></li>
+              <li class="header__item"><a href="#methodology" class="header__link">Методология</a></li>
+              <li class="header__item"><a href="#career" class="header__link">Карьера</a></li>
+              <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--primary header__btn">Старт</a>
+          <button class="header__burger" id="burger-btn" aria-label="Menu">
+              <i data-lucide="menu"></i>
+          </button>
+      </div>
   </div>
 </header>
 
-
-    <main>
+    <main class="main" id="main-content">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+  <div class="hero__canvas" id="hero-canvas"></div>
+  <div class="container hero__container">
+      <div class="hero__content">
+          <span class="hero__tag">Технология нового поколения</span>
+          <h1 class="hero__title">
+              Постройте карьеру, <br>
+              которая работает <span class="text-accent">на вас</span>
+          </h1>
+          <p class="hero__subtitle">
+              Освойте AI-инструменты для реальных задач.
+              Инновационная методология обучения, доступная каждому.
+          </p>
+          <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary hero__btn">Начать сейчас</a>
+              <a href="#about" class="btn btn--outline">Узнать детали</a>
+          </div>
+      </div>
+  </div>
+
+
+</section>
+
+<section class="section about" id="about">
+  <div class="container about__container">
+      <div class="about__content">
+          <span class="section-tag">О платформе</span>
+          <h2 class="section-title">Переосмыслите подход к <span class="text-accent">развитию</span></h2>
+          <p class="section-text">
+              Kynox-Drive — это не просто курсы, это экосистема. Мы объединяем передовую цифровую инфраструктуру и методики обучения, доказавшие эффективность в Европе.
+          </p>
+          <p class="section-text">
+              Наша цель — дать вам инструменты для легкого старта в IT, даже без предварительного опыта.
+          </p>
+
+          <div class="about__stats">
+              <div class="stat-item">
+                  <span class="stat-number" data-count="2000">0</span>+
+                  <span class="stat-label">Выпускников</span>
+              </div>
+              <div class="stat-item">
+                  <span class="stat-number" data-count="94">0</span>%
+                  <span class="stat-label">Трудоустройство</span>
+              </div>
+          </div>
+      </div>
+      <div class="about__image-wrapper">
+          <img src="img/placeholder.png" alt="Инновационный офис" class="about__img">
+          <div class="about__badge">
+              <i data-lucide="shield-check"></i>
+              <span>Проверенный партнер</span>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section courses" id="courses">
+  <div class="container">
+      <div class="section-header">
+          <span class="section-tag">Траектории</span>
+          <h2 class="section-title">Выберите свой <span class="text-accent">апгрейд</span></h2>
+      </div>
+
+      <div class="bento-grid">
+
+          <div class="bento-card bento-card--large">
+              <div class="bento-card__content">
+                  <div class="bento-badge">Хит 2025</div>
+                  <h3 class="bento-title">Fullstack Developer</h3>
+                  <p class="bento-desc">
+                      Полный цикл создания веб-продуктов. От верстки до сервера.
+                      Идеально для фриланса в Европе.
+                  </p>
+                  <ul class="bento-list">
+                      <li>HTML/CSS/JS</li>
+                      <li>React & Node.js</li>
+                      <li>Docker</li>
+                  </ul>
+                  <a href="#contact" class="bento-link">
+                      Подробнее <i data-lucide="arrow-up-right"></i>
+                  </a>
+              </div>
+              <div class="bento-card__visual">
+                  <div class="visual-code">
+                      <span>const future =</span>
+                      <span class="code-highlight">new Career();</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="bento-card bento-card--tall">
+              <div class="bento-icon-box">
+                  <i data-lucide="bot"></i>
+              </div>
+              <h3 class="bento-title">AI Architect</h3>
+              <p class="bento-desc">Создание чат-ботов и интеграция ChatGPT в бизнес.</p>
+              <div class="bento-bottom">
+                  <span class="bento-price">€ Высокий спрос</span>
+                  <a href="#contact" class="btn-circle"><i data-lucide="plus"></i></a>
+              </div>
+          </div>
+
+          <div class="bento-card bento-card--standard">
+              <h3 class="bento-title">Python Start</h3>
+              <p class="bento-desc">Автоматизация и парсинг данных. Лучший старт для новичка.</p>
+              <a href="#contact" class="bento-simple-link">Начать путь →</a>
+          </div>
+
+          <div class="bento-card bento-card--dark">
+              <div class="bento-card__content">
+                  <h3 class="bento-title text-white">Сомневаетесь?</h3>
+                  <p class="bento-desc text-white-50">Пройдите тест и узнайте, какая профессия подходит именно вам.</p>
+                  <a href="#contact" class="btn btn--white btn--sm">Пройти тест</a>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<section class="section innovations" id="methodology">
+  <div class="container innovations__container">
+      <div class="innovations__visual">
+          <div class="innovations__circle"></div>
+          <div class="innovations__content-box">
+              <i data-lucide="cpu" size="48"></i>
+              <h3>AI Integration</h3>
+          </div>
+      </div>
+      <div class="innovations__info">
+          <span class="section-tag">Инновации</span>
+          <h2 class="section-title">AI-инструменты для реальных задач</h2>
+          <ul class="innovations__list">
+              <li class="innovations__item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Адаптация контента под ваш уровень</span>
+              </li>
+              <li class="innovations__item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Автоматизация рутинных процессов</span>
+              </li>
+              <li class="innovations__item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Доступ к платформе открыт 24/7</span>
+              </li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Оценить перспективы</a>
+      </div>
+  </div>
+</section>
+
+<section class="section blog" id="blog">
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">База знаний</h2>
+          <a href="#" class="btn btn--outline">Все статьи</a>
+      </div>
+
+      <div class="blog__grid">
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Blog 1">
+              </div>
+              <div class="blog-card__body">
+                  <span class="blog-card__date">12 Окт 2025</span>
+                  <h3 class="blog-card__title">Как нейросети меняют рынок труда в Европе</h3>
+                  <a href="#" class="blog-card__link">Читать <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Blog 2">
+              </div>
+              <div class="blog-card__body">
+                  <span class="blog-card__date">08 Окт 2025</span>
+                  <h3 class="blog-card__title">5 навыков для успешного старта в IT</h3>
+                  <a href="#" class="blog-card__link">Читать <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Blog 3">
+              </div>
+              <div class="blog-card__body">
+                  <span class="blog-card__date">01 Окт 2025</span>
+                  <h3 class="blog-card__title">Пассивный доход на техподдержке: миф или реальность?</h3>
+                  <a href="#" class="blog-card__link">Читать <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+      </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact__container">
+      <div class="contact__info">
+          <span class="section-tag">Контакты</span>
+          <h2 class="section-title">Воплотите мечты в реальность</h2>
+          <p class="section-text">
+              Оставьте заявку на бесплатную консультацию. Наш менеджер свяжется с вами в течение 15 минут.
+          </p>
+
+          <div class="contact__details">
+              <div class="contact__item">
+                  <div class="contact__icon"><i data-lucide="mail"></i></div>
+                  <div>
+                      <p class="contact__label">Email</p>
+                      <a href="mailto:support@kynox-drive.click" class="contact__link">support@kynox-drive.click</a>
+                  </div>
+              </div>
+              <div class="contact__item">
+                  <div class="contact__icon"><i data-lucide="phone"></i></div>
+                  <div>
+                      <p class="contact__label">Телефон</p>
+                      <a href="tel:+390212345678" class="contact__link">+39 02 1234 5678</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="contact__form-wrapper">
+          <form class="contact__form" id="contactForm" novalidate>
+              <div class="form-group">
+                  <label for="name" class="form-label">Ваше имя</label>
+                  <input type="text" id="name" class="form-input" placeholder="Иван Петров" required>
+                  <span class="form-error">Введите имя</span>
+              </div>
+
+              <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-input" placeholder="email@example.com" required>
+                  <span class="form-error">Введите корректный email</span>
+              </div>
+
+              <div class="form-group">
+                  <label for="phone" class="form-label">Телефон</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="+39..." required>
+                  <span class="form-error">Только цифры допускаются</span>
+              </div>
+
+              <div class="form-group">
+                  <label for="captcha" class="form-label" id="captchaLabel">Сколько будет 3 + 5?</label>
+                  <input type="text" id="captcha" class="form-input" required>
+                  <span class="form-error">Решите пример</span>
+              </div>
+
+              <div class="form-checkbox">
+                  <input type="checkbox" id="consent" required>
+                  <label for="consent">Я согласен с <a href="privacy.html">Политикой конфиденциальности</a></label>
+              </div>
+
+              <button type="submit" class="btn btn--primary contact__btn">
+                  <span>Отправить заявку</span>
+                  <i data-lucide="send"></i>
+              </button>
+          </form>
+
+          <div class="contact__success" id="successMessage">
+              <div class="success-icon"><i data-lucide="check"></i></div>
+              <h3>Заявка отправлена!</h3>
+              <p>Мы свяжемся с вами в ближайшее время.</p>
+          </div>
+      </div>
+  </div>
+</section>
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+      <div class="footer__grid">
+          <div class="footer__col">
+              <a href="#" class="footer__logo">Kynox-Drive</a>
+              <p class="footer__desc">
+                  Образовательная платформа нового поколения.
+                  Технологии, которые работают на вас.
+              </p>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Навигация</h3>
+              <ul class="footer__links">
+                  <li><a href="#about">О школе</a></li>
+                  <li><a href="#courses">Программы</a></li>
+                  <li><a href="#career">Карьерный центр</a></li>
+                  <li><a href="#blog">Блог</a></li>
+              </ul>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Информация</h3>
+              <ul class="footer__links">
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="cookies.html">Cookie Policy</a></li>
+                  <li><a href="terms.html">Terms of Use</a></li>
+                  <li><a href="return.html">Return Policy</a></li>
+                  <li><a href="disclaimer.html">Disclaimer</a></li>
+                  <li><a href="personal-data-policy.html">Personal Data</a></li>
+              </ul>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Контакты</h3>
+              <ul class="footer__contacts">
+                  <li>
+                      <i data-lucide="phone"></i>
+                      <a href="tel:+390212345678">+39 02 1234 5678</a>
+                  </li>
+                  <li>
+                      <i data-lucide="mail"></i>
+                      <a href="mailto:support@kynox-drive.click">support@kynox-drive.click</a>
+                  </li>
+                  <li>
+                      <i data-lucide="map-pin"></i>
+                      <span>Via Alessandro Volta 12, 20121 Milano, Italy</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="footer__bottom">
+          <p>&copy; 2025 Kynox-Drive. Все права защищены.</p>
+      </div>
   </div>
 </footer>
-
-
+    <div class="cookie-popup" id="cookiePopup">
+      <div class="cookie-popup__content">
+          <div class="cookie-popup__icon">
+              <i data-lucide="cookie"></i>
+          </div>
+          <p class="cookie-popup__text">
+              Этот сайт использует cookies для улучшения работы. Подробнее — в нашей
+              <a href="cookies.html">Cookie политике</a>.
+          </p>
+      </div>
+      <button class="btn btn--primary" id="acceptCookies">Принять</button>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+      lucide.createIcons();
+  </script>
   </body>
 </html>

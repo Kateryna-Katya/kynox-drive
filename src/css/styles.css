@@ -889,3 +889,83 @@ img {
     .cookie-popup__text { font-size: 13px; }
     .cookie-popup .btn { width: 100%; padding: 10px; }
 }
+/* =========================================
+   13. LEGAL PAGES STYLING
+   ========================================= */
+   .pages__content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 60px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 40px rgba(2, 132, 199, 0.05);
+}
+
+.pages__content h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.pages__content h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--color-text-main);
+}
+
+.pages__content p {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.pages__content ul {
+    margin-bottom: 24px;
+    padding-left: 0;
+}
+
+.pages__content li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    font-size: 16px;
+}
+
+/* Кастомные маркеры списка */
+.pages__content li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.pages__content strong {
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.pages__content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.pages__content a:hover {
+    color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+    .pages__content {
+        padding: 30px 20px;
+    }
+}

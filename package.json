@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/test-two/",
+    "build": "vite build --base=/kynox-drive/",
     "preview": "vite preview"
   },
   "devDependencies": {
